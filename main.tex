@@ -1,0 +1,158 @@
+\documentclass[12pt]{ujarticle}
+
+%
+% Needed packages
+%
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fancybox}
+\usepackage{ascmac,itembbox}
+\usepackage{color}
+%\usepackage{boxedminipage}
+
+%
+% Style of text
+%
+\topmargin -10mm
+\textwidth 155mm
+\textheight 240mm
+\oddsidemargin 0mm
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\fboxsep}{12pt}
+
+%
+% New definitions
+%
+\newcounter{exp}[section]
+\newcommand{\jikken}{\begin{center}\fbox{\Large \bf 実験 \thesection}\end{center}}
+\newcommand{\subjikken}[1]{\stepcounter{exp}\hspace*{-\parindent}{\bf [実験 \thesection-\theexp] #1}}
+
+\newcommand{\maru}[1]{\textcircled{\scriptsize #1}}
+\renewcommand{\labelenumi}{\maru{\arabic{enumi}}}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+% Equation numbering
+\makeatletter
+\@addtoreset{equation}{section}
+\def\theequation{\thesection.\arabic{equation}}
+\makeatother
+
+%\title{物理学方法論A/Bテキスト}
+%\date{{\the\year}年度}
+%\author{明治学院大学 物理学教室}
+
+\begin{document}
+
+%
+% Title
+%
+\pagestyle{empty}
+
+\begin{center}
+
+\vspace*{2cm}
+
+\shadowbox{
+{\Huge\bf 物理学方法論 A/B}
+}
+
+
+\vspace{1cm}
+
+{\Large 〜``波''と``粒子''で見る自然界〜}
+
+
+
+\vspace{2cm}
+
+
+%\begin{tabular}{ccc}
+%\includegraphics[width=6cm, bb=0 0 230 173]{Figs/wave.png} & & \includegraphics[width=6cm, bb=0 0 230 173]{Figs/solar.png} \\
+%&&\\
+%\includegraphics[width=6cm, bb=0 0 230 173]{Figs/spectrum.png} & & \includegraphics[width=6cm, bb=0 0 461 346]{Figs/robot.png} \\
+%\end{tabular}
+%
+
+{\large 明治学院大学 物理学教室編}\\
+\bigskip
+%\advance \year by 1
+{\large {\the\year}年度版}
+
+\vspace{9cm}
+
+\underline{\large \qquad 曜 \qquad 限 \quad 担当: \phantom{ 　　　　　　　　}}\\
+\bigskip
+\underline{\large 学籍番号: \phantom{　　　　　　　　　　　　　　}}\\
+\bigskip
+\underline{\large 氏名: \phantom{　　　　　　　　　　　　　　　　}}
+\end{center}
+
+\newpage
+{　}
+\newpage
+
+\pagestyle{empty}
+%\pagenumbering{roman}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\newpage
+\pagestyle{empty}
+{　}
+\newpage
+
+%
+% Texts
+%
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+
+\setcounter{section}{-1}
+\include{00_Intro/Intro}
+\include{01_Wave/Wave}
+\include{18_Resonance/Resonance}
+\include{05_Oscilloscope/Oscilloscope}
+\include{02_Refraction/Refraction}
+\include{03_Interference/Interference}
+%\include{04_Newton/Newton}
+\include{06_Magnetism/Magnetism}
+\include{07_EleMag/EleMag}
+%\include{08_MonteCarlo/MonteCarlo}
+\include{17_Superconductivity/Superconductivity}
+\include{09_SpecificHeat/SpecificHeat}
+\include{10_Thermocouple/Thermocouple}
+\include{11_CTMratio/CTMratio}
+\include{12_Spectrum/Spectrum}
+%\include{13_FranckHertz/FranckHertz}
+\include{14_Radiation/Radiation}
+%\include{15_LaserDistance/LaserDistance}
+\include{16_Robotics/Robotics}
+\newpage
+
+\pagestyle{empty}
+
+\underline{\large \it Memo}
+\newpage
+
+\underline{\large \it Memo}
+\newpage
+
+\underline{\large \it Memo}
+\newpage
+
+\begin{center}
+\vspace*{20cm}
+\fbox{
+\begin{minipage}{7cm}
+物理学方法論 A/B テキスト\\
+%\advance \year by 1
+\small{{\the\year}年4月1日 発行}\\
+編集発行　　　明治学院大学物理学教室
+\end{minipage}}
+\end{center}
+
+\end{document}  

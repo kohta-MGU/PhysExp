@@ -1,0 +1,124 @@
+\documentclass[12pt,slashbox]{ujarticle}
+
+%
+% Needed packages
+%
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fancybox}
+\usepackage{ascmac,itembbox}
+\usepackage{color}
+\usepackage{diagbox}
+%\usepackage{boxedminipage}
+
+%
+% Style of text
+%
+\topmargin -10mm
+\textwidth 155mm
+\textheight 240mm
+\oddsidemargin 0mm
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\fboxsep}{12pt}
+
+%
+% New definitions
+%
+\newcounter{exp}[section]
+\newcommand{\jikken}{\begin{center}\fbox{\Large \bf 実験 \thesection}\end{center}}
+\newcommand{\subjikken}[1]{\stepcounter{exp}\hspace*{-\parindent}{\bf [実験 \thesection-\theexp] #1}}
+
+\newcommand{\maru}[1]{\textcircled{\scriptsize #1}}
+\renewcommand{\labelenumi}{\maru{\arabic{enumi}}}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+% Equation numbering
+\makeatletter
+\@addtoreset{equation}{section}
+\def\theequation{\thesection.\arabic{equation}}
+\makeatother
+
+\begin{document}
+
+%
+% Report sheets
+%
+
+\pagestyle{empty}
+
+\addcontentsline{toc}{section}{\protect\numberline{}{付録：実験メモ}}
+
+\begin{center}
+
+\vspace*{2cm}
+
+\doublebox{
+{\Large\bf 付録：実験レポート}
+}
+
+\end{center}
+
+\newpage
+
+\pagestyle{plain}
+
+\setcounter{section}{0}
+
+\pagenumbering{arabic}
+\include{01_Wave/WaveRep}
+
+\pagenumbering{arabic}
+\include{18_Resonance/ResonanceRep}
+
+\pagenumbering{arabic}
+\include{05_Oscilloscope/OscilloscopeRep}
+
+\pagenumbering{arabic}
+\include{02_Refraction/RefractionRep}
+
+\pagenumbering{arabic}
+\include{03_Interference/InterferenceRep}
+
+%\pagenumbering{arabic}
+%\include{04_Newton/NewtonRep}
+
+\pagenumbering{arabic}
+\include{06_Magnetism/MagnetismRep}
+
+\pagenumbering{arabic}
+\include{07_EleMag/EleMagRep2}
+
+\pagenumbering{arabic}
+\include{17_Superconductivity/SuperconductivityRep}
+
+%\pagenumbering{arabic}
+%\include{08_MonteCarlo/MonteCarloRep}
+
+\pagenumbering{arabic}
+\include{09_SpecificHeat/SpecificHeatRep}
+
+\pagenumbering{arabic}
+\include{10_Thermocouple/ThermocoupleRep}
+
+\pagenumbering{arabic}
+\include{11_CTMratio/CTMratioRep}
+
+\pagenumbering{arabic}
+\include{12_Spectrum/SpectrumRep}
+
+%\pagenumbering{arabic}
+%\include{13_FranckHertz/FranckHertzRep}
+
+\pagenumbering{arabic}
+\include{14_Radiation/RadiationRep}
+
+%\pagenumbering{arabic}
+%\include{15_LaserDistance/LaserDistanceRep}
+
+\pagenumbering{arabic}
+\include{16_Robotics/RoboticsRep}
+
+
+\end{document}  
